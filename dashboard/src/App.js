@@ -20,8 +20,7 @@ function App() {
       </header>
     </div>
   );
-  //this is a comment for testin the git command
-  //this is a new test for git command
 }
+
 
 export default App;
