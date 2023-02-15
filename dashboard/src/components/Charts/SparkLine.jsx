@@ -1,6 +1,6 @@
 import React from 'react'
 
-const SpakLine = () => {
+const SparkLine = () => {
   return (
     <div>
       
@@ -8,4 +8,4 @@ const SpakLine = () => {
   )
 }
 
-export default SpakLine
+export default SparkLine
