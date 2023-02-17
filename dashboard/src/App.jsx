@@ -60,7 +60,7 @@ const App = () => {
             </div>
           ) : (
             <div className="w-0 dark:bg-secondary-dark-bg">
-              sidebar w-0
+              <Sidebar />
             </div>
           )}
           <div
