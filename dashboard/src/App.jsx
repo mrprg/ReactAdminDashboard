@@ -31,8 +31,9 @@ import {
 } from "react-router-dom";
 import { FiSettings } from "react-icons/fi";
 import { TooltipComponent } from "@syncfusion/ej2-react-popups";
-const activeMenu = true;
+import { useStateContext } from "./contexts/ContextProvider";
 const App = () => {
+  const { activeMenu } = useStateContext();
   return (
     <div>
       <BrowserRouter>
