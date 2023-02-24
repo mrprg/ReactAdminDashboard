@@ -1,6 +1,7 @@
 import React from "react";
 import { Button } from "../components";
 import { earningData } from "../data/dummy";
+import { GoPrimitiveDot } from "react-icons/go";
 
 const Ecommerce = () => {
   return (
@@ -44,7 +45,8 @@ const Ecommerce = () => {
                 <span className="text-lg font-semibold">
                   {item.amount}
                 </span>
-                <span className={`text-sm text-${item.pcColor} ml-2`}>
+                <span
+                  className={`text-sm text-${item.pcColor} ml-2`}>
                   {item.percentage}
                 </span>
               </p>
@@ -54,10 +56,53 @@ const Ecommerce = () => {
             </div>
           ))}
         </div>
+      </div>
+      <div className="flex gap-10 flex-wrap justify-center">
+        <div className="bg-white m-3 p-4 rounded-2xl md:w-780 dark:text-gray-200 dark:bg-secondary-dark-bg">
+          <div className="flex justify-between">
+            <p className="font-semibold text-xl">
+              Revenue Updates
+            </p>
+            <div className="flex items-center gap-4">
+              <p className="flex items-center gap-2 text-gray-600 hover:drop-shadow-xl">
+                <span>
+                  <GoPrimitiveDot />
+                </span>
+                <span>Expense</span>
+              </p>
+              <p className="flex items-center gap-2 text-green-400 hover:drop-shadow-xl">
+                <span>
+                  <GoPrimitiveDot />
+                </span>
+                <span>Budget</span>
+              </p>
+            </div>
+          </div>
+          <div className="mt-10 flex gap-10 flex-wrap justify-center">
+            <div className="border-r-1 border-color m-4 pr-10">
+              <div>
+                <p>
+                  <span className="text-3xl font-semibold">
+                    $93,438
+                  </span>
+                  <span className="p-1.5 hover:drop-shadow-xl rounded-full text-white ml-3 text-xs bg-green-400 cursor-pointer">
+                    23%
+                  </span>
+                </p>
+                <p className="text-gray-500 mt-1">Budget</p>
+              </div>
+              <div className="mt-8">
+                <p>
+                  <span className="text-3xl font-semibold">
+                    $48,438
+                  </span>
+                </p>
+                <p className="text-gray-500 mt-1">Expense</p>
+              </div>
+            </div>
+          </div>
         </div>
-        <div>
-          
-        </div>
+      </div>
     </div>
   );
 };
