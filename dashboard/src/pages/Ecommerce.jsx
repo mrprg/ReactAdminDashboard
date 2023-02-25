@@ -1,6 +1,9 @@
 import React from "react";
-import { Button, SparkLine } from "../components";
-import { earningData,SparklineAreaData } from "../data/dummy";
+import { Button, SparkLine, Stacked } from "../components";
+import {
+  earningData,
+  SparklineAreaData,
+} from "../data/dummy";
 import { GoPrimitiveDot } from "react-icons/go";
 
 const Ecommerce = () => {
@@ -112,6 +115,20 @@ const Ecommerce = () => {
                   color="blue"
                 />
               </div>
+              <div className="mt-10">
+                <Button
+                  color="white"
+                  bgColor="blue"
+                  text="Download Report"
+                  borderRadius="10px"
+                />
+              </div>
+            </div>
+            <div>
+              <Stacked
+              width='320px'
+              height='360px'
+              />
             </div>
           </div>
         </div>
