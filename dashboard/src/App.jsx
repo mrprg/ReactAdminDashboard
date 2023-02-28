@@ -33,7 +33,7 @@ import { FiSettings } from "react-icons/fi";
 import { TooltipComponent } from "@syncfusion/ej2-react-popups";
 import { useStateContext } from "./contexts/ContextProvider";
 const App = () => {
-  const { activeMenu } = useStateContext();
+  const { activeMenu, themeSettings } = useStateContext();
   return (
     <div>
       <BrowserRouter>
@@ -73,6 +73,7 @@ const App = () => {
             </div>
 
             <div>
+              {themeSettings && (<ThemeSettings />) } 
               <Routes>
                 {/* dashboard  */}
                 <Route path="/" element={<Ecommerce />} />
