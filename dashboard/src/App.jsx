@@ -33,7 +33,12 @@ import { FiSettings } from "react-icons/fi";
 import { TooltipComponent } from "@syncfusion/ej2-react-popups";
 import { useStateContext } from "./contexts/ContextProvider";
 const App = () => {
-  const { activeMenu, themeSettings,setThemeSettings } = useStateContext();
+  const {
+    activeMenu,
+    currentColor,
+    themeSettings,
+    setThemeSettings,
+  } = useStateContext();
   return (
     <div>
       <BrowserRouter>
@@ -49,7 +54,7 @@ const App = () => {
                 onClick={() => setThemeSettings(true)}
                 className="text-3xl p-3 hover:drop-shadow-xl hover:bg-light-gray text-white"
                 style={{
-                  background: "blue",
+                  background: { currentColor },
                   borderRadius: "50%",
                 }}>
                 <FiSettings />
@@ -74,7 +79,7 @@ const App = () => {
             </div>
 
             <div>
-              {themeSettings && (<ThemeSettings />) } 
+              {themeSettings && <ThemeSettings />}
               <Routes>
                 {/* dashboard  */}
                 <Route path="/" element={<Ecommerce />} />
