@@ -54,7 +54,7 @@ const App = () => {
                 onClick={() => setThemeSettings(true)}
                 className="text-3xl p-3 hover:drop-shadow-xl hover:bg-light-gray text-white"
                 style={{
-                  background: { currentColor },
+                  background: currentColor,
                   borderRadius: "50%",
                 }}>
                 <FiSettings />
