@@ -38,9 +38,10 @@ const App = () => {
     currentColor,
     themeSettings,
     setThemeSettings,
+    currentMode,
   } = useStateContext();
   return (
-    <div>
+    <div className={currentMode === 'Dark' ? 'dark' : ''}>
       <BrowserRouter>
         <div className="flex relative dark:bg-main-dark-bg">
           <div
@@ -71,7 +72,7 @@ const App = () => {
             </div>
           )}
           <div
-            className={`dark:bg-main-bg w-full bg-main-bg min-h-screen ${
+            className={`dark:bg-main-dark-bg w-full bg-main-bg min-h-screen ${
               activeMenu ? "md:ml-72" : "flex-2"
             }`}>
             <div className="fixed md:static w-full navbar dark:bg-main-dark-bg bg-main-bg">
